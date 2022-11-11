@@ -14,7 +14,7 @@ class Batch:
         self.sku = sku
         self.eta = eta
         self._purchased_quantity = qty
-        self._allocations = set() # type: Set[OrderLine]
+        self._allocations = set() # type: set[OrderLine]
 
     def allocate(self, line: OrderLine):
         if self.can_allocate(line):
