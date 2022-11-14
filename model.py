@@ -2,7 +2,8 @@ from dataclasses import dataclass
 from typing import Optional, List
 from datetime import date
 
-@dataclass(frozen=True)
+@dataclass(unsafe_hash=True) 
+#@dataclass(frozen=True) # switched to unsafe_hash due to frozen instance error running tests.
 class OrderLine:
     orderid: str
     sku: str
