@@ -1,5 +1,5 @@
 import abc
-import model
+import domain.model as model
 class AbstractRepository(abc.ABC):
     @abc.abstractmethod
     def add(self, batch: model.Batch):
